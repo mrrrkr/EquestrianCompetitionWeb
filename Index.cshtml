@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Регистрация на соревнования";
+}
+
+<div>
+    <h2 style="text-align: center;">Регистрация участников на соревнования</h2><br>
+
+    @*<label style="text-align: center;" for="sportspersonName">Название соревнования:</label><br>
+    <input type="text" id="title" name="title" required><br><br>
+
+    <label for="sportspersonName">Дата соревнования:</label> <br>
+    <input type="date" id="dateOfCompetition" name="dateOfCompetition" required><br><br>*@
+    <div class="row">
+        <div class="col-md-4">
+
+        <h3>Спортсмен</h3><br>
+        <label for="sportspersonName">Имя спортсмена:</label><br>
+        <input type="text" id="sportsmanFirstName" name="sportsmanFirstName" required><br><br>
+        
+        <label for="sportspersonName">Фамилия спортсмена:</label><br>
+        <input type="text" id="sportsmanSecondName" name="sportsmanSecondName" required><br><br>
+        
+        <label for="sportspersonName">Дата рождения спортсмена:</label><br>
+        <input type="date" id="personBirthday" name="personBirthday" required><br><br>
+        </div>
+
+        <div class="col-md-4">
+        <h3>Лошадь</h3><br>
+        <label for="horseName">Имя лошади:</label><br>
+        <input type="text" id="horseName" name="horseName" required><br><br>
+
+        <label for="sportspersonName">Дата рождения лошади:</label><br>
+        <input type="date" id="horseBirthday" name="horseBirthday" required><br><br>
+        </div>
+
+        <div class="col-md-4">
+        <h3>Выбор теста</h3><br>
+
+            <label for="testKind">Вид дисциплины:</label><br>
+            @Html.DropDownList("SelectedValue", ViewBag.EnumValues as SelectList, "")<br><br>
+
+        <label for="testName">Название теста:</label><br>
+        <input type="text" id="testName" name="testName" required><br><br>
+        </div><br><br>
+    <input type="submit" value="Отправить заявку">
+</div>
+</div>
+
+@*<label for="sportspersonName">Тренер спортсмена:</label>
+    <input type="text" id="trainerFirstName" name="trainerFirstName" required><br>
+    <input type="text" id="trainerSecondName" name="trainerSecondName" required><br>
+    <input type="text" id="trainerFirdName" name="trainerFirdName" required><br>*@
